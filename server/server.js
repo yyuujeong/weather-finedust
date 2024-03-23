@@ -26,4 +26,6 @@ app.get('/pollution', async (req, res) => {
   }
 });
 
+module.exports = app;
+
 app.listen(PORT, () =>console.log(`server is listening on ${PORT}`));
