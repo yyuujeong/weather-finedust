@@ -90,7 +90,7 @@ const Finedust = () => {
   const airPollution = async (lat, lon) => {
     try {
       const finedustUrl = await axios.get(
-        `http://localhost:5000/pollution?lat=${lat}&lon=${lon}`
+        `https://weather-finedust-server.vercel.app/pollution?lat=${lat}&lon=${lon}`
       );
       setAir(finedustUrl);
       console.log(finedustUrl);

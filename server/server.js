@@ -8,10 +8,6 @@ const PORT = 5000;
 
 app.use(cors());
 
-// app.get('/', async(req,res) => {
-//   res.json({ "message": "hi" });
-// })
-
 app.get("/weather/:location", async (req, res) => {
   try {
     const response = await axios.get(

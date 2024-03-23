@@ -81,12 +81,12 @@ const MaxMin = styled.div`
 `;
 const Humidity = styled.div`
   margin-top: 3.2rem;
-  font-size: 2.4rem; 
+  font-size: 2.4rem;
 `;
 
 const GlobalWeather = () => {
   const [location, setLocation] = useState("");
-  const weatherUrl = `http://localhost:5000/weather/${location}`;
+  const weatherUrl = `https://weather-finedust-server.vercel.app/weather/${location}`;
   const [result, setResult] = useState("");
 
   const searchWeather = async (e) => {
@@ -123,7 +123,8 @@ const GlobalWeather = () => {
           <WeatherInformation>
             <li>
               <img
-                src={`http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`}></img>
+                src={`http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`}
+              ></img>
             </li>
             <li>{result.data.weather[0].main}</li>
             <li>
