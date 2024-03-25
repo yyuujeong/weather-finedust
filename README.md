@@ -1,6 +1,6 @@
 # 날씨 조회/위치 기반 미세먼지
 
-### <https://weather-finedust.vercel.app/>
+### <https://weather-finedust.vercel.app>
 
 ## :hammer_and_pick: 기술
 ```React``` ```Styled-Components``` ```Express.js```
@@ -14,7 +14,7 @@
 - 시간대 별 배경화면 변화
 - react-router를 이용한 페이지 이동 (특정 링크 스타일링을 위해 NavLink 사용)
 - Open API를 사용하고 async & await와 axios로 API 호출
-- Api key를 숨기기 위해 백엔드 프레임워크 Express.js 사용
+- API 키 보호를 위해 Express 백엔드 프레임워크 사용 & 정보 조회를 위한 REST API 구현
 - 미디어 쿼리를 이용해 반응형으로 제작
 
 ### :point_right: 날씨 조회
