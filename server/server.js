@@ -18,7 +18,6 @@ app.get("/weather/:location", async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-
 app.get("/pollution", async (req, res) => {
   try {
     const pollutionRes = await axios.get(
@@ -31,5 +30,4 @@ app.get("/pollution", async (req, res) => {
 });
 
 module.exports = app;
-
 app.listen(PORT, () => console.log(`server is listening on ${PORT}`));

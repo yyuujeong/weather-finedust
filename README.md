@@ -8,6 +8,7 @@
 ## :card_index_dividers: 프로젝트 소개
 - 개인 프로젝트
 - Open API를 활용해 보고자 제작
+- Vercel을 통해 배포
 
 ## :mag_right: 주요기능
 - styled-components로 스타일 적용
