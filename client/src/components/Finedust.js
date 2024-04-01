@@ -99,43 +99,40 @@ const Finedust = () => {
     }
   };
 
+  //미세먼지 등급 별 이모지
   const FinedustLevels = ({ pm10, aqi }) => {
+    let emoji;
+    let message;
+    let color;
+  
     if (aqi === 1 || pm10 <= 20) {
-      return (
-        <div>
-          <FaRegFaceGrinHearts></FaRegFaceGrinHearts>
-          <p style={{ color: "blue" }}>매우 좋음</p>
-        </div>
-      );
+      emoji = <FaRegFaceGrinHearts />;
+      message = "매우 좋음";
+      color = "blue";
     } else if (aqi === 2 || (pm10 >= 21 && pm10 <= 50)) {
-      return (
-        <div>
-          <FaRegFaceSmileWink></FaRegFaceSmileWink>
-          <p style={{ color: "skyblue" }}>좋음</p>
-        </div>
-      );
+      emoji = <FaRegFaceSmileWink />;
+      message = "좋음";
+      color = "skyblue";
     } else if (aqi === 3 || (pm10 >= 51 && pm10 <= 100)) {
-      return (
-        <div>
-          <FaRegFaceSmile></FaRegFaceSmile>
-          <p style={{ color: "green" }}>보통</p>
-        </div>
-      );
+      emoji = <FaRegFaceSmile />;
+      message = "보통";
+      color = "green";
     } else if (aqi === 4 || (pm10 >= 101 && pm10 <= 200)) {
-      return (
-        <div>
-          <FaRegFaceFrown></FaRegFaceFrown>
-          <p style={{ color: "orange" }}>나쁨</p>
-        </div>
-      );
+      emoji = <FaRegFaceFrown />;
+      message = "나쁨";
+      color = "orange";
     } else {
-      return (
-        <div>
-          <FaRegFaceAngry></FaRegFaceAngry>
-          <p style={{ color: "red" }}>매우 나쁨</p>
-        </div>
-      );
+      emoji = <FaRegFaceAngry />;
+      message = "매우 나쁨";
+      color = "red";
     }
+  
+    return (
+      <div>
+        {emoji}
+        <p style={{ color }}>{message}</p>
+      </div>
+    );
   };
 
   return (

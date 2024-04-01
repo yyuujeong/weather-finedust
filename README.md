@@ -23,4 +23,4 @@
 ### :point_right: 위치 기반 미세먼지
 - Geolocation API를 이용해 사용자 위치를 구함
 - Reverse-Geocoding으로 위도와 경도 값을 주소로 변환
-- 미세먼지 단계별 이모티콘 & 색상 변경
+- 미세먼지 단계별 이모지 & 색상 변경
