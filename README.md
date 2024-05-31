@@ -6,12 +6,11 @@
 ```React``` ```Styled-Components``` ```Express.js```
 
 ## :card_index_dividers: 프로젝트 소개
-- 개인 프로젝트
-- Open API를 활용해 보고자 제작
+- 리액트와 express를 사용한 프로젝트로 Open API를 활용해 보고자 제작
 - Vercel을 통해 배포
 
 ## :mag_right: 주요기능
-- styled-components로 스타일 적용
+- styled-components로 스타일을 적용해 재사용성을 높임
 - 시간대 별 배경화면 변화
 - react-router를 이용한 페이지 이동 (특정 링크 스타일링을 위해 NavLink 사용)
 - Open API를 사용하고 async & await와 axios로 API 호출
