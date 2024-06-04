@@ -6,6 +6,7 @@
 ```React``` ```Styled-Components``` ```Express.js```
 
 ## :card_index_dividers: 프로젝트 소개
+- 개인 프로젝트
 - 리액트와 express를 사용한 프로젝트로 Open API를 활용해 보고자 제작
 - Vercel을 통해 배포
 
