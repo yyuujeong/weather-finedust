@@ -3,11 +3,11 @@
 ### <https://weather-finedust.vercel.app>
 
 ## :hammer_and_pick: 기술
-```React``` ```Styled-Components``` ```Express.js```
+```React``` ```Styled-Components``` ```Express```
 
 ## :card_index_dividers: 프로젝트 소개
 - 개인 프로젝트
-- 리액트와 express를 사용한 프로젝트로 Open API를 활용해 보고자 제작
+- 리액트와 Express를 사용했고 Open API를 활용해 보고자 제작
 - Vercel을 통해 배포
 
 ## :mag_right: 주요기능
@@ -15,8 +15,8 @@
 - 시간대 별 배경화면 변화
 - react-router를 이용한 페이지 이동 (특정 링크 스타일링을 위해 NavLink 사용)
 - Open API를 사용하고 async & await와 axios로 API 호출
-- API 키 보호를 위해 Express 백엔드 프레임워크 사용 & 정보 조회를 위한 REST API 구현
-- 미디어 쿼리를 이용해 반응형으로 제작
+- API 키 보호를 위해 Express 백엔드 프레임워크 사용 & 정보 조회를 위해 REST API를 구현
+- 반응형 구현을 위해 미디어 쿼리를 사용
 
 ### :point_right: 날씨 조회
 - 세계 도시를 검색하여 날씨 정보 조회
