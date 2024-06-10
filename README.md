@@ -10,7 +10,7 @@
 - 리액트와 Express를 사용했고 Open API를 활용해 보고자 제작
 - Vercel을 통해 배포
 
-## :mag_right: 주요기능
+## :mag_right: 주요 기능
 - styled-components로 스타일을 적용해 재사용성을 높임
 - 시간대 별 배경화면 변화
 - react-router를 이용한 페이지 이동 (특정 링크 스타일링을 위해 NavLink 사용)
