@@ -15,7 +15,7 @@
 - 시간대 별 배경화면 변화
 - react-router를 이용한 페이지 이동 (특정 링크 스타일링을 위해 NavLink 사용)
 - Open API를 사용하고 async & await와 axios로 API 호출
-- API 키 보호를 위해 Express 백엔드 프레임워크 사용 & 정보 조회를 위해 REST API를 구현
+- 정보 조회를 위해 REST API를 구현하고, API 키를 보호하기 위해 Express 백엔드 프레임워크를 사용하여 개선
 - 반응형 구현을 위해 미디어 쿼리를 사용
 
 ### :point_right: 날씨 조회
