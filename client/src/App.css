@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('./assets/fonts/NanumSquareNeo-bRg.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: 'NanumSquareNeo-Variable';
+}
