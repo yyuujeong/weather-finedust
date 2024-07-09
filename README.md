@@ -17,8 +17,8 @@
 - styled-components로 스타일을 적용해 재사용성을 높임
 - 시간대 별 배경화면 변화
 - react-router를 이용한 페이지 이동 (특정 링크 스타일링을 위해 NavLink 사용)
-- Open API를 사용하고 async & await와 axios로 API 호출
-- 정보 조회를 위해 REST API를 사용하고, 클라이언트 측에서 API 키가 노출되지 않도록 보호하기 위해 Express 백엔드 프레임워크를 사용하여 임시 서버 구축
+- Open API를 통해 사용자 위치와 날씨/대기 정보를 수집하고, 정보 조회를 위해 REST API를 사용
+- 클라이언트 측에서 API 키가 노출되지 않도록 보호하기 위해 Express 백엔드 프레임워크를 사용하여 임시 서버 구축
 - 미디어 쿼리를 사용해 반응형 웹 구현
 
 ### :point_right: 날씨 조회
