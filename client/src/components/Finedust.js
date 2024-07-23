@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useEffect, useCallback } from "react";
+import {useFinedust} from "../store/store";
 import { styled } from "styled-components";
 import {
   FaRegFaceGrinHearts,
@@ -54,50 +54,22 @@ const FinedustGroup = styled.ul`
 `;
 
 const Finedust = () => {
+  const {reverse, air, fetchReverse, fetchAir} = useFinedust();
   //현재시간
   const today = new Date().toLocaleString();
 
   //현재위치
-  const getCurrentLocation = () => {
+  const getCurrentLocation = useCallback(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       const lat = position.coords.latitude;
       const lon = position.coords.longitude;
-
-      reverseApi(lat, lon);
-      airPollution(lat, lon);
+      fetchReverse(lat, lon);
+      fetchAir(lat, lon);
     });
-  };
+  }, [fetchReverse, fetchAir]);
   useEffect(() => {
     getCurrentLocation();
   }, []);
-
-  //역지오(위도경도->주소)
-  const [data, setData] = useState("");
-  const reverseApi = async (lat, lon) => {
-    try {
-      const reverseGeoUrl = await axios.get(
-        `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=ko`
-      );
-      setData(reverseGeoUrl);
-      console.log(reverseGeoUrl);
-    } catch (err) {
-      alert(err);
-    }
-  };
-
-  //미세먼지
-  const [air, setAir] = useState("");
-  const airPollution = async (lat, lon) => {
-    try {
-      const finedustUrl = await axios.get(
-        `https://weather-finedust-server.vercel.app/pollution?lat=${lat}&lon=${lon}`
-      );
-      setAir(finedustUrl);
-      console.log(finedustUrl);
-    } catch (err) {
-      alert(err);
-    }
-  };
 
   //미세먼지 등급 별 이모지
   const FinedustLevels = ({ pm10, aqi }) => {
@@ -138,11 +110,11 @@ const Finedust = () => {
   return (
     <>
       <ContentFinedust>
-        {Object.keys(data).length !== 0 && (
+        {Object.keys(reverse).length !== 0 && (
           <FinedustCityName>
-            {data.data.city}
+            {reverse.city}
             { "\u00A0"}
-            {data.data.locality}
+            {reverse.locality}
           </FinedustCityName>
         )}
         <CurrentTime>{today}</CurrentTime>
@@ -150,7 +122,7 @@ const Finedust = () => {
           <div>
             <GradeCheck>
               <b>
-                <FinedustLevels aqi={air.data.list[0].main.aqi} />
+                <FinedustLevels aqi={air.list[0].main.aqi} />
               </b>
             </GradeCheck>
 
@@ -158,16 +130,16 @@ const Finedust = () => {
               <li>
                 미세먼지
                 <span>
-                  <FinedustLevels pm10={air.data.list[0].components.pm10} />
+                  <FinedustLevels pm10={air.list[0].components.pm10} />
                 </span>
-                {air.data.list[0].components.pm10} μg/m³
+                {air.list[0].components.pm10} μg/m³
               </li>
               <li>
                 초미세먼지
                 <span>
-                  <FinedustLevels aqi={air.data.list[0].main.aqi} />
+                  <FinedustLevels aqi={air.list[0].main.aqi} />
                 </span>
-                {air.data.list[0].components.pm2_5} μg/m³
+                {air.list[0].components.pm2_5} μg/m³
               </li>
             </FinedustGroup>
           </div>

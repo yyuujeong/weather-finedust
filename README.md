@@ -6,7 +6,7 @@
 - 2023.12 - 2024.02
 
 ## :hammer_and_pick: 기술
-```React``` ```styled-components``` ```Express```
+```React``` ```styled-components``` ```Express``` ```Zustand```
 
 ## :card_index_dividers: 프로젝트 소개
 - 개인 프로젝트
@@ -19,6 +19,7 @@
 - react-router를 이용한 페이지 이동 (특정 링크 스타일링을 위해 NavLink 사용)
 - Open API를 통해 RESTful한 API를 사용하여 사용자의 위치와 날씨/대기 정보를 조회
 - 클라이언트 측에서 API 키가 노출되지 않도록 보호하기 위해 Express 백엔드 프레임워크를 사용하여 임시 서버 구축
+- Zustand를 사용해 상태 관리
 - 미디어 쿼리를 사용해 반응형 웹 구현
 
 ### :point_right: 날씨 조회

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
+import {useGlobalWeather} from "../store/store";
 import { styled } from "styled-components";
 import { MdOutlineWaterDrop } from "react-icons/md";
 
@@ -85,19 +86,17 @@ const Humidity = styled.div`
 `;
 
 const GlobalWeather = () => {
-  const [location, setLocation] = useState("");
+  const location = useGlobalWeather(state => state.location);
+  const result = useGlobalWeather(state => state.result);
+  const setLocation = useGlobalWeather(state => state.setLocation);
+  const setResult = useGlobalWeather(state => state.setResult);
   const weatherUrl = `https://weather-finedust-server.vercel.app/weather/${location}`;
-  const [result, setResult] = useState("");
 
   const searchWeather = async (e) => {
     e.preventDefault();
     try {
-      const weatherData = await axios({
-        method: "get",
-        url: weatherUrl,
-      });
-      console.log(weatherData);
-      setResult(weatherData);
+      const weatherData = await axios.get(weatherUrl);
+      setResult(weatherData.data);
     } catch (err) {
       alert(err);
     }
@@ -119,25 +118,25 @@ const GlobalWeather = () => {
       </ContentGlobal>
       {Object.keys(result).length !== 0 && (
         <ResultWrapper>
-          <WeatherCityName>{result.data.name}</WeatherCityName>
+          <WeatherCityName>{result.name}</WeatherCityName>
           <WeatherInformation>
             <li>
               <img
-                src={`http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`}
+                src={`http://openweathermap.org/img/wn/${result.weather[0].icon}@2x.png`}
               ></img>
             </li>
-            <li>{result.data.weather[0].main}</li>
+            <li>{result.weather[0].main}</li>
             <li>
-              {Math.trunc(result.data.main.temp)} <span>°C</span>
+              {Math.trunc(result.main.temp)} <span>°C</span>
             </li>
           </WeatherInformation>
           <MaxMin>
-            최고: {Math.trunc(result.data.main.temp_max)}° 최저:{" "}
-            {Math.trunc(result.data.main.temp_min)}°
+            최고: {Math.trunc(result.main.temp_max)}° 최저:{" "}
+            {Math.trunc(result.main.temp_min)}°
           </MaxMin>
           <Humidity>
             <MdOutlineWaterDrop></MdOutlineWaterDrop>
-            {result.data.main.humidity}%
+            {result.main.humidity}%
           </Humidity>
         </ResultWrapper>
       )}
