@@ -1,5 +1,7 @@
 # 날씨 조회/위치 기반 미세먼지
 
+![project-weather](https://github.com/user-attachments/assets/da724ce9-6286-44bc-a991-d4644cfc1f26)
+
 세계 각 도시의 날씨와 사용자의 위치에 따른 미세먼지를 확인할 수 있는 서비스입니다.
 
 - 1인 개발
