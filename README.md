@@ -17,7 +17,7 @@
 - react-router-dom을 통해 페이지 이동을 구현하고, NavLink를 사용하여 활성 링크 스타일링 적용
 - 시간대에 따라 변하는 배경화면을 제공하여 사용자의 시각적 경험 향상
 
-### :point_right: 날씨 조회
+### :point_right: 세계 날씨
 - 세계 도시를 검색하여 날씨 정보 조회
 ### :point_right: 위치 기반 미세먼지
 - Geolocation API를 이용해 사용자 위치 구함
