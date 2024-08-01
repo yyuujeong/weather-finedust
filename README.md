@@ -1,4 +1,4 @@
-# 날씨 조회/위치 기반 미세먼지
+# 세계 도시 날씨/위치 기반 미세먼지
 
 ![project-weather](https://github.com/user-attachments/assets/da724ce9-6286-44bc-a991-d4644cfc1f26)
 

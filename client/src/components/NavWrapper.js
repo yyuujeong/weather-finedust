@@ -33,7 +33,7 @@ const NavWrapper = () => {
           style={({isActive}) => {
             return isActive ? activeStyle : deactiveStyle;
           }}
-        >세계도시 날씨 조회</NavLink>
+        >세계 도시 날씨</NavLink>
         <span>|</span>
         <NavLink
           to="/finedust"
