@@ -92,8 +92,21 @@ const GlobalWeather = () => {
   const setResult = useGlobalWeather(state => state.setResult);
   const weatherUrl = `https://weather-finedust-server.vercel.app/weather/${location}`;
 
+  const korean = (text) => /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/.test(text);
+
   const searchWeather = async (e) => {
     e.preventDefault();
+
+    if(location.trim().length === 0) {
+      alert('도시 이름을 입력하세요.');
+      return;
+    }
+
+    if(korean(location)) {
+      alert('영어로 입력하세요.');
+      return;
+    }
+
     try {
       const weatherData = await axios.get(weatherUrl);
       setResult(weatherData.data);
@@ -108,7 +121,7 @@ const GlobalWeather = () => {
         <form onSubmit={searchWeather}>
           <input
             type="text"
-            placeholder="도시를 입력하세요"
+            placeholder="영어로 도시를 입력하세요"
             autoFocus
             value={location}
             onChange={(e) => setLocation(e.target.value)}

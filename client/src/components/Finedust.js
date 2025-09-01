@@ -60,13 +60,22 @@ const Finedust = () => {
 
   //현재위치
   const getCurrentLocation = useCallback(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      const lat = position.coords.latitude;
-      const lon = position.coords.longitude;
-      fetchReverse(lat, lon);
-      fetchAir(lat, lon);
-    });
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        fetchReverse(lat, lon);
+        fetchAir(lat, lon);
+      },
+      (err) => {
+        if(err.code === err.PERMISSION_DENIED) {
+          alert('위치 서비스가 꺼져 있거나 액세스가 차단되어 있습니다. 확인해 주세요.');
+          return;
+        } 
+      }
+    )
   }, [fetchReverse, fetchAir]);
+
   useEffect(() => {
     getCurrentLocation();
   }, []);
