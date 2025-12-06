@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/weather-finedust/static/css/main.040d4de2.css",
-    "main.js": "/weather-finedust/static/js/main.b286188a.js",
-    "static/media/NanumSquareNeo-bRg.ttf": "/weather-finedust/static/media/NanumSquareNeo-bRg.5076032d79b49a26baa2.ttf",
-    "static/media/dawn.png": "/weather-finedust/static/media/dawn.027db0c42f8f88eec1b7.png",
-    "static/media/night.png": "/weather-finedust/static/media/night.0d88909b2288490f0e47.png",
-    "static/media/afternoon.png": "/weather-finedust/static/media/afternoon.bfef5e4ad35b3310477b.png",
-    "static/media/day.png": "/weather-finedust/static/media/day.59f5a418e1e0b66d52b8.png",
-    "index.html": "/weather-finedust/index.html",
-    "main.040d4de2.css.map": "/weather-finedust/static/css/main.040d4de2.css.map",
-    "main.b286188a.js.map": "/weather-finedust/static/js/main.b286188a.js.map"
+    "main.css": "/static/css/main.47c83fc5.css",
+    "main.js": "/static/js/main.1d0b8db9.js",
+    "static/media/NanumSquareNeo-bRg.ttf": "/static/media/NanumSquareNeo-bRg.5076032d79b49a26baa2.ttf",
+    "static/media/dawn.png": "/static/media/dawn.027db0c42f8f88eec1b7.png",
+    "static/media/night.png": "/static/media/night.0d88909b2288490f0e47.png",
+    "static/media/afternoon.png": "/static/media/afternoon.bfef5e4ad35b3310477b.png",
+    "static/media/day.png": "/static/media/day.59f5a418e1e0b66d52b8.png",
+    "index.html": "/index.html",
+    "main.47c83fc5.css.map": "/static/css/main.47c83fc5.css.map",
+    "main.1d0b8db9.js.map": "/static/js/main.1d0b8db9.js.map"
   },
   "entrypoints": [
-    "static/css/main.040d4de2.css",
-    "static/js/main.b286188a.js"
+    "static/css/main.47c83fc5.css",
+    "static/js/main.1d0b8db9.js"
   ]
 }
